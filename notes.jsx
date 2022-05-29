@@ -14,6 +14,10 @@ mainComponents=()=>{
         }
         hanldeOnSubmit=(evt)=>{
             evt.preventDefault();
+            // this check if the input is empty
+            if(evt.trim().length===0){
+                return;
+            }
             submitData={
                 email: handleInput.inputEmail,
                 name: handleInput.inputName,
