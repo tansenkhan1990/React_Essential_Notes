@@ -1,4 +1,6 @@
 // #set state based on the previous state
+// import styled components
+import styled form 'styled-components'
 mainComponents=()=>{
     [checkClass,setCheckClass] = useSate(true);
     [handleInput, setHandleInput] = useSate(
@@ -6,7 +8,9 @@ mainComponents=()=>{
         inputName: '',
         InputAge:''
         })
-        
+        const Form= styled.Form`
+            background-color: ${props=>(props.isValid?'red':'blue')};
+        `
         handleInput=(ev)=>{
         setHandleInput((prevState)=>{
         return (...prevState,ev.target.value)
@@ -32,11 +36,11 @@ mainComponents=()=>{
 
         }
         // *** Form onSubmit should be inside of the form tag
-        <form onSubmit={hanldeOnSubmit} className=`form-control ${checkClass?'valid':''}`>
+        <Form isValid='true' onSubmit={hanldeOnSubmit} className=`form-control ${checkClass?'valid':''}`>
             <input type="text" style = {{backgroundColor: 'red',height:'90px'}}value={handleInput.inputEmail} onChange={handleInput}>Email</input>
             <input type="text" style={backgroundColor: handleInput.inputEmail?'green':'red' } value={handleInput.inputName} onChange={handleInput}>name</input>
             <input type="text" value={handleInput.InputAge} onChange={handleInput}>age</input>
-        </form>
+        </Form>
          handleOnSubmit =(evt)=>{
              evt.preventDefault(); // this will stop to load the page
         
