@@ -1,5 +1,8 @@
 // #set state based on the previous state
 // import styled components
+import style form '/newCss.module'
+// for that .module.css we have to call class name like
+// <div className={style.styleClassname}>
 import styled form 'styled-components'
 mainComponents=()=>{
     [checkClass,setCheckClass] = useSate(true);
