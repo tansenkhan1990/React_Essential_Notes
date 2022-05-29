@@ -1,6 +1,6 @@
 // #set state based on the previous state
 mainComponents=()=>{
-
+    [checkClass,setCheckClass] = useSate(true);
     [handleInput, setHandleInput] = useSate(
         {inputEmail:'',
         inputName: '',
@@ -32,7 +32,7 @@ mainComponents=()=>{
 
         }
         // *** Form onSubmit should be inside of the form tag
-        <form onSubmit={hanldeOnSubmit}>
+        <form onSubmit={hanldeOnSubmit} className=`form-control ${checkClass?'valid':''}`>
             <input type="text" style = {{backgroundColor: 'red',height:'90px'}}value={handleInput.inputEmail} onChange={handleInput}>Email</input>
             <input type="text" style={backgroundColor: handleInput.inputEmail?'green':'red' } value={handleInput.inputName} onChange={handleInput}>name</input>
             <input type="text" value={handleInput.InputAge} onChange={handleInput}>age</input>
