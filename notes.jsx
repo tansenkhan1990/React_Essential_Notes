@@ -29,7 +29,7 @@ mainComponents=()=>{
         }
         // *** Form onSubmit should be inside of the form tag
         <form onSubmit={hanldeOnSubmit}>
-            <input type="text" value={handleInput.inputEmail} onChange={handleInput}>Email</input>
+            <input type="text" style = {{backgroundColor: 'red',height:'90px'}}value={handleInput.inputEmail} onChange={handleInput}>Email</input>
             <input type="text" value={handleInput.inputName} onChange={handleInput}>name</input>
             <input type="text" value={handleInput.InputAge} onChange={handleInput}>age</input>
         </form>
