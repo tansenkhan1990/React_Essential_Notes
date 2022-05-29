@@ -19,6 +19,7 @@ mainComponents=()=>{
                 name: handleInput.inputName,
                 age:handleInput.InputAge
             }
+            // clear input data after saving
             setHandleInput({
                 inputEmail:'',
                 inputName: '',
